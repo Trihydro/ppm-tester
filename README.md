@@ -9,3 +9,6 @@ This project is intended to make testing the PPM easier.
 ### While Testing
 1. Send test BSMs by invoking the test.sh script or the send_bsm.sh script.
 1. Observe the result by checking the info.log file in the logs directory in the container.
+
+## Link to PPM
+https://github.com/CDOT-CV/jpo-cvdp
