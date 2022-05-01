@@ -11,4 +11,4 @@ This project is intended to make testing the PPM easier.
 1. Observe the result by checking the info.log file in the logs directory in the container.
 
 ## Link to PPM
-https://github.com/CDOT-CV/jpo-cvdp
+https://github.com/dmccoystephenson/jpo-cvdp
