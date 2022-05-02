@@ -8,7 +8,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 # define variables
-broker=172.31.232.171
+broker=192.168.79.22 # NOTE: this needs to be changed often
 topic=topic.OdeBsmJson
 filename=$1
 
