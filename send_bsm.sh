@@ -7,8 +7,15 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+if [ -z "$KAFKA_BROKER" ]; then
+    echo "KAFKA_BROKER environment variable not set"
+    exit 1
+fi
+
 # define variables
-broker=192.168.79.22 # NOTE: this needs to be changed often
+
+# get broker from environment variable
+broker=$KAFKA_BROKER
 topic=topic.OdeBsmJson
 filename=$1
 

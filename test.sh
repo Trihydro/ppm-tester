@@ -2,6 +2,11 @@
 
 # Author: Daniel McCoy Stephenson
 
+if [ -z "$KAFKA_BROKER" ]; then
+    echo "KAFKA_BROKER environment variable not set"
+    exit 1
+fi
+
 # expected to be retained
 echo "Sending Test BSM: Normal, Inside Geofence - Expected Behavior: Retained"
 ./send_bsm.sh ./bsms/testbsm_normal_inside_geofence.txt
