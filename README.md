@@ -1,6 +1,14 @@
 # Testing PPM
 This project is intended to make testing the PPM easier.
 
+## Objective
+The objective here is to verify the following:
+- BSMs inside the geofence are retained
+- BSMs with a partII section are retained
+- BSMs outside the geofence are suppressed
+- BSMs above the speed range are suppressed
+- BSMs below the speed range are suppressed
+
 ## Steps
 ### Preparation
 1. Spin up PPM using standalone docker-compose script.
