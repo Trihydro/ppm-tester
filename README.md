@@ -47,3 +47,6 @@ The objective here is to verify the following:
 
 ## Link to PPM
 https://github.com/usdot-jpo-ode/jpo-cvdp/tree/develop
+
+## Kafka Quickstart
+https://kafka.apache.org/quickstart
