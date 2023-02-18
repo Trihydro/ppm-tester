@@ -44,7 +44,7 @@ The objective here is to verify the following:
         kafka-console-producer --broker-list localhost:9092 --topic (topic name)
 
 ### While Testing
-1. Write test BSMs (located in the [bsms](bsms)) directory to the topic.
+1. Write test BSMs (located in the [bsms](bsms) directory) to the topic.
 1. Verify that the BSMs are written to the topic.
 1. Observe the result by checking the info.log file in the logs directory in the container or by checking the terminal running the consumer.
 
