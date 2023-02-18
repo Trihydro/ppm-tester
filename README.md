@@ -11,7 +11,10 @@ The objective here is to verify the following:
 
 ## How to test with scripts
 ### Preparation
-1. Make sure that the KAFKA_HOST environment variable is set to the IP address of the kafka container.
+1. Make sure that the KAFKA_HOST environment variable is set to the IP address of the WSL instance running the PPM. This should be set in the WSL instance running the testing-ppm project.
+
+1. Make sure that the DOCKER_HOST_IP environment variable is set to the IP address of the WSL instance running the PPM. It should be noted that environment variables in the .env file will override the environment variables set in the WSL instance, so if the .env file is being used, the DOCKER_HOST_IP environment variable should be set in the .env file.
+
 1. Spin up PPM using standalone docker-compose script.
 
         docker-compose -f docker-compose-standalone.yml up --build --remove-orphans
