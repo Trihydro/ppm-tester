@@ -35,9 +35,9 @@ The objective here is to verify the following:
 
         docker exec -it (container ID) /bin/bash
 
-1. Navigate to the (insert directory here) directory.
+1. Navigate to the `/opt/kafka/bin` directory.
 
-        cd (insert directory here)
+        cd /opt/kafka/bin
 
 1. On one terminal, start reading from the topic.
 
