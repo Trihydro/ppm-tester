@@ -1,6 +1,4 @@
-#!/bin/sh
-
-# Author: Daniel McCoy Stephenson
+#!/bin/bash
 
 if [ -z "$KAFKA_BROKER" ]; then
     echo "KAFKA_BROKER environment variable not set"
