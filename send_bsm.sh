@@ -1,6 +1,4 @@
-#!/bin/sh
-
-# Author: Daniel McCoy Stephenson
+#!/bin/bash
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: ./sendbsm.sh <filename>"

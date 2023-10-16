@@ -11,13 +11,13 @@ The objective here is to verify the following:
 
 ## How to test with scripts
 ### Preparation
-1. Make sure that the KAFKA_HOST environment variable is set to the IP address of the WSL instance running the PPM. This should be set in the WSL instance running the testing-ppm project.
+1. Make sure that the KAFKA_HOST environment variable is set to the IP address of the WSL instance running the PPM. This should be set in the WSL instance running the testing-ppm project. If you run into trouble, setting this to `localhost` may help.
 
 1. Make sure that the DOCKER_HOST_IP environment variable is set to the IP address of the WSL instance running the PPM. It should be noted that environment variables in the .env file will override the environment variables set in the WSL instance, so if the .env file is being used, the DOCKER_HOST_IP environment variable should be set in the .env file.
 
 1. Spin up PPM using standalone docker-compose script.
 
-        docker-compose -f docker-compose-standalone.yml up --build --remove-orphans
+> docker-compose -f docker-compose-standalone.yml up --build --remove-orphans
 
 ### While Testing
 1. Send test BSMs by invoking the test.sh script or the send_bsm.sh script.
@@ -35,13 +35,17 @@ The objective here is to verify the following:
 
         docker exec -it (container ID) /bin/bash
 
+1. Navigate to the `/opt/kafka/bin` directory.
+
+        cd /opt/kafka/bin
+
 1. On one terminal, start reading from the topic.
 
         kafka-console-consumer --bootstrap-server localhost:9092 --topic (topic name) --from-beginning
 
 1. On the other terminal, start writing to the topic.
         
-        kafka-console-producer --broker-list localhost:9092 --topic (topic name)
+        kafka-console-producer --bootstrap-server localhost:9092 --topic (topic name)
 
 ### While Testing
 1. Write test BSMs (located in the [bsms](bsms) directory) to the topic.
